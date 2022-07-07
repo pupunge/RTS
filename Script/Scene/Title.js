@@ -1,5 +1,7 @@
 var UITitle = {
     titleText : [8, 48],
+    startGameButton : [128, 128, 768, 64],
+    startGameText : [136, 176],
 };
 
 function loopTitle() {
@@ -16,5 +18,11 @@ function displayTitle() {
 }
 
 function mouseUpTitle(x, y) {
-    
+    if (menu === false) {
+        if (state === '') {
+            if (pointInsideRectArray(x, y, UITitle.startGameButton)) {
+                scene = 'LevelSelect';
+            }
+        }
+    }
 }
