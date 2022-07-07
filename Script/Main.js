@@ -7,6 +7,9 @@ function start() {
     context = canvas.getContext('2d');
     canvasRect = canvas.getBoundingClientRect();
 
+    canvas.addEventListener('mouseup', mouseUp);
+    window.addEventListener('keydown', keyDown);
+
     loop();
 }
 

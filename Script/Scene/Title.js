@@ -15,13 +15,17 @@ function displayTitle() {
     context.font = '48px Opensans';
 
     context.clearRect(0, 0, 1024, 600);
+
+    context.fillText(`Desserterria RTS`, UITitle.titleText[0], UITitle.titleText[1]);
+
+    context.fillText(`Start Game`, UITitle.startGameText[0], UITitle.startGameText[1]);
 }
 
 function mouseUpTitle(x, y) {
     if (menu === false) {
         if (state === '') {
             if (pointInsideRectArray(x, y, UITitle.startGameButton)) {
-                scene = 'LevelSelect';
+                scene = 'SaveSelect';
             }
         }
     }
